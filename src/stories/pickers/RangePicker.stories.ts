@@ -5,6 +5,12 @@ const meta = {
 	title: 'Pickers/DatePicker',
 	component: RangePicker,
 	tags: ['autodocs'],
+	parameters: {
+		docs: {
+			//story: { inline: true }, // render the story in an iframe
+			//canvas: { sourceState: 'shown' }, // start with the source open
+		},
+	},
 	argTypes: {
 		picker: {
 			control: {
@@ -25,4 +31,12 @@ export const SimpleDateRangePicker: Story = {
 
 export const MonthRangePicker: Story = {
 	args: { picker: 'month' },
+};
+
+export const DisabledRangePicker: Story = {
+	args: { disabled: true },
+};
+
+export const DateAndTimeRangePicker: Story = {
+	args: { showTime: true },
 };
